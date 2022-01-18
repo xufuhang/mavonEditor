@@ -91,6 +91,7 @@
                 </div>
             </transition>
         </div>
+        <slot name="left-toolbar-after" />
         <button :disabled="!editable" type="button" v-if="toolbars.code" @click="$clicks('code')"
                 class="op-icon fa fa-mavon-code" aria-hidden="true"
                 :title="`${d_words.tl_code} (ctrl+alt+c)`"></button>
@@ -110,7 +111,6 @@
         <button type="button" v-if="toolbars.save" @click="$clicks('save')" class="op-icon fa fa-mavon-floppy-o"
                 aria-hidden="true"
                 :title="`${d_words.tl_save} (ctrl+s)`"></button>
-        <slot name="left-toolbar-after" />
 
         <!-- 添加image链接 -->
         <transition name="fade">
